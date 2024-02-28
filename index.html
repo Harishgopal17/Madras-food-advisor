@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/indexstyle.css" />
+    <link rel="icon" type="image/x-icon" href="logo/favicon.ico" />
+    <title>Madras Food Advisor</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="main-nav">
+        <div class="logo-and-search-flex">
+          <div class="logo-flex">
+            <a href="#">
+              <img src="logo/MFA logo.png" class="logo" alt="MFA logo"
+            /></a>
+            <a href="#"
+              ><p class="nav-heading">Madras <br />Food&nbsp;Advisor</p></a
+            >
+          </div>
+          <div class="search">
+            <input
+              type="text"
+              id="res-input"
+              onkeyup="search()"
+              placeholder="Search for restaurants..."
+              title="Search"
+            />
+            <ul class="search-list" id="search-list">
+              <li>
+                <a href="Restaurants/theresidency.html" target="_blank"
+                  >The Residency</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Restaurants/fabelle-chocolate-boutique.html"
+                  target="_blank"
+                  >Fabelle Chocolate Boutique</a
+                >
+              </li>
+              <li>
+                <a href="Restaurants/a2b-veg-restaurant.html" target="_blank"
+                  >A2B Veg Restaurant</a
+                >
+              </li>
+              <li>
+                <a
+                  href="Restaurants/sangeetha-veg-restaurant.html"
+                  target="_blank"
+                  >Sangeetha Veg Restaurant</a
+                >
+              </li>
+              <li>
+                <a href="Restaurants/blu-boulangerie-co.html" target="_blank"
+                  >Blu Boulangerie & Co</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+        <nav class="nav">
+          <ul class="nav-list">
+            <li>
+              <a class="nav-list-links" href="events.html" target="_blank"
+                >Events</a
+              >
+            </li>
+            <li><a class="nav-list-links" href="#aboutus">About&nbsp;Us</a></li>
+            <li>
+              <a class="nav-list-links" href="contactus.html" target="_blank"
+                >Contact&nbsp;Us</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <main>
+      <div class="container main-section">
+        <header class="main-heading">
+          <h3>Restaurants in Chennai (Madras)</h3>
+        </header>
+        <aside class="filter-whole">
+          <div class="filter-flex">
+            <p class="filter-heading">Category</p>
+            <form class="checkbox-container">
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="veg-res"
+                  name="vegetarian"
+                  value="veg"
+                  onclick="filter()"
+                />
+                <label for="vegetarian">Veg</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="Non-veg-res"
+                  name="Non-vegetarian"
+                  value="Non-veg"
+                  onclick="filter()"
+                />
+                <label for="Non-vegetarian">Non-veg</label>
+              </div>
+            </form>
+          </div>
+          <div class="filter-flex">
+            <p class="filter-heading">Establishment Type</p>
+            <form class="checkbox-container">
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="restaurants-type"
+                  name="restaurants"
+                  value="restaurants"
+                  onclick="filter()"
+                />
+                <label for="restaurants">Restaurants</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="Cafe-type"
+                  name="Cafe"
+                  value="Cafe"
+                  onclick="filter()"
+                />
+                <label for="Cafe">Cafe</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="dessert-type"
+                  name="dessert"
+                  value="dessert"
+                  onclick="filter()"
+                />
+                <label for="dessert">Dessert</label>
+              </div>
+            </form>
+          </div>
+          <div class="filter-flex">
+            <p class="filter-heading">Meals</p>
+            <form class="checkbox-container">
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="breakfast"
+                  name="breakfast"
+                  value="breakfast"
+                  onclick="filter()"
+                />
+                <label for="breakfast">Breakfast</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="lunch"
+                  name="lunch"
+                  value="lunch"
+                  onclick="filter()"
+                />
+                <label for="lunch">Lunch</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="dinner"
+                  name="dinner"
+                  value="dinner"
+                  onclick="filter()"
+                />
+                <label for="dinner">Dinner</label>
+              </div>
+            </form>
+          </div>
+          <div class="filter-flex">
+            <p class="filter-heading">Price range</p>
+            <form class="checkbox-container">
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="budget-friendly"
+                  name="budget-friendly"
+                  value="budget-friendly"
+                  onclick="filter()"
+                />
+                <label for="budget-friendly">Budget-Friendly</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="mid-range"
+                  name="mid-range"
+                  value="mid-range"
+                  onclick="filter()"
+                />
+                <label for="mid-range">Mid-Range</label>
+              </div>
+              <div class="checkbox-flex">
+                <input
+                  type="checkbox"
+                  id="upscale"
+                  name="upscale"
+                  value="upscale"
+                  onclick="filter()"
+                />
+                <label for="dinner">Upscale</label>
+              </div>
+            </form>
+          </div>
+          <div class="google-map">
+            <h3>Restaurants in chennai</h3>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d67697.38454914516!2d80.20682942316488!3d13.05730692906488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sbest%20restaurants%20in%20chennai!5e0!3m2!1sen!2sin!4v1708912881296!5m2!1sen!2sin"
+              width="250"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </aside>
+        <section>
+          <div class="restaurants-list">
+            <a href="Restaurants/theresidency.html" target="_blank">
+              <figure class="restaurants veg breakfast cafe">
+                <img
+                  class="img"
+                  src="img/the-residency1.jpg"
+                  alt="the-residency"
+                />
+                <div class="restaurants-box">
+                  <h3>The Residency</h3>
+                  <ul class="restaurants-details">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="location-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>Crowne Plaza Chennai Adyar Park</span>
+                    </li>
+                    <li>
+                      <img
+                        src="icons/foodplate-orange.svg"
+                        class="food-plate-icon"
+                        alt="food plate icon"
+                      />
+                      <span>Indian, Asian, Street Food</span>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </a>
+            <a href="Restaurants/sangeetha-veg-restaurant.html" target="_blank">
+              <figure class="restaurants rest breakfast cafe">
+                <img
+                  class="img"
+                  src="img/sangeetha-veg-restaurant1.jpg"
+                  alt="sangeetha-veg-restaurant"
+                />
+                <div class="restaurants-box">
+                  <h3>Sangeetha Veg Restaurant</h3>
+                  <ul class="restaurants-details">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="location-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>T nagar, Chennai</span>
+                    </li>
+                    <li>
+                      <img
+                        src="icons/foodplate-orange.svg"
+                        class="food-plate-icon"
+                        alt="food plate icon"
+                      />
+                      <span>Indian, Asian, Vegetarian Friendly</span>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </a>
+
+            <a
+              href="Restaurants/fabelle-chocolate-boutique.html"
+              target="_blank"
+            >
+              <figure class="restaurants veg rest">
+                <img
+                  class="img"
+                  src="img/fabelle-chocolate-boutique1.jpg"
+                  alt="fabelle-chocolate-boutique"
+                />
+                <div class="restaurants-box">
+                  <h3>Fabelle Chocolate Boutique</h3>
+                  <ul class="restaurants-details">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="location-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>63 Mount Road ITC Grand Chola</span>
+                    </li>
+                    <li>
+                      <img
+                        src="icons/foodplate-orange.svg"
+                        class="food-plate-icon"
+                        alt="food plate icon"
+                      />
+                      <span>Dessert, Cafe</span>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </a>
+            <a href="Restaurants/a2b-veg-restaurant.html" target="_blank">
+              <figure class="restaurants veg rest breakfast">
+                <img
+                  class="img"
+                  src="img/adyar-anandha-bavan1.jpg"
+                  alt="adyar-anandha-bavan"
+                />
+                <div class="restaurants-box">
+                  <h3>A2B Veg Restaurant</h3>
+                  <ul class="restaurants-details">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="location-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>9 Lattice Bridge Road, Adyar</span>
+                    </li>
+                    <li>
+                      <img
+                        src="icons/foodplate-orange.svg"
+                        class="food-plate-icon"
+                        alt="food plate icon"
+                      />
+                      <span>Indian, Asian, Vegetarian Friendly</span>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </a>
+            <a href="Restaurants/blu-boulangerie-co.html" target="_blank">
+              <figure class="restaurants veg rest breakfast cafe">
+                <img
+                  class="img"
+                  src="img/blu-boulangerie-co1.jpg"
+                  alt="blu-boulangerie-co"
+                />
+                <div class="restaurants-box">
+                  <h3>Blu Boulangerie & Co</h3>
+                  <ul class="restaurants-details">
+                    <li>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 24 24"
+                        fill="currentColor"
+                        class="location-icon"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                          clip-rule="evenodd"
+                        />
+                      </svg>
+                      <span>St. Thomas Mount, Chennai</span>
+                    </li>
+                    <li>
+                      <img
+                        src="icons/foodplate-orange.svg"
+                        class="food-plate-icon"
+                        alt="food plate icon"
+                      />
+                      <span>Cafe</span>
+                    </li>
+                  </ul>
+                </div>
+              </figure>
+            </a>
+          </div>
+        </section>
+        <section class="testimonial-section">
+          <div class="testimonial-box">
+            <blockquote class="testimonial-text">
+              "FoodieFusion has become my trusted culinary companion, igniting
+              my passion for cooking with its innovative recipes and expert
+              guidance. Each dish is a testament to flavor and creativity,
+              making every meal an unforgettable experience."
+            </blockquote>
+            <p class="testimonial-author">&mdash; Jamie Oliver</p>
+          </div>
+        </section>
+        <section class="aboutus" id="aboutus">
+          <div>
+            <h3>About&nbsp;Us</h3>
+          </div>
+          <div class="aboutus-text">
+            <p>
+              Madras Food Advisor was born out of a love for food and a desire
+              to share the rich culinary heritage of Tamil Nadu with the world.
+              Our team of food enthusiasts is dedicated to curating the best
+              dining experiences and helping you discover the hidden gems of
+              South Indian cuisine.
+            </p>
+            <p>
+              At Madras Food Advisor, our mission is simple: to connect food
+              lovers with the best dining experiences in Tamil Nadu. Whether
+              you're a local looking to explore new restaurants or a visitor
+              eager to sample authentic South Indian cuisine, we're here to be
+              your trusted guide.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="footer-nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="events.html" target="_blank">Events</a></li>
+          <li><a href="#aboutus">About&nbsp;Us</a></li>
+          <li>
+            <a href="contactus.html" target="_blank">Contact&nbsp;Us</a>
+          </li>
+        </ul>
+      </div>
+      <div class="copyrights-diclaimer">
+        <div class="copy-rights">
+          <p>Copyright &copy; 2024 by Harish.</p>
+        </div>
+        <div class="disclaimer">
+          <h4 class="disclaimer-heading">Disclaimer:</h4>
+          <p class="disclaimer-text">
+            This website is created for educational purposes. The content and
+            recommendations provided are fictitious and should not be relied
+            upon for real-world decisions. Any resemblance to actual persons,
+            establishments, or events is coincidental. Visitors are advised to
+            conduct their own research before making dining decisions based on
+            the information presented here. The creators of this website are not
+            liable for any consequences resulting from its use.
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="dev"><p>Designed and Developed by Harish with ❣️</p></div>
+  </body>
+  <script src="script.js"></script>
+</html>
