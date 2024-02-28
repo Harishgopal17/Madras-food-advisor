@@ -443,7 +443,7 @@ aside {
 footer {
   background-color: #212529;
   color: #ced4da;
-  padding: 5rem;
+  padding: 4rem;
   display: flex;
   align-items: center;
   gap: 15rem;
@@ -471,29 +471,18 @@ footer {
   color: #ffbc0d;
 }
 
-.copyrights-diclaimer {
-  display: flex;
-  flex-direction: column;
-  gap: 3rem;
-}
-
-.copy-rights {
-  font-size: 1.4rem;
-  align-self: center;
-}
-
 .disclaimer {
   display: flex;
   flex-direction: column;
   gap: 1.8rem;
 }
 .disclaimer-heading {
-  font-size: 1.6rem;
+  font-size: 1.8rem;
   font-weight: 500;
 }
 
 .disclaimer-text {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   line-height: 1.5;
 }
 
