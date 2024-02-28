@@ -36,19 +36,6 @@ function filter() {
   let mr = document.getElementById("mid-range");
   let us = document.getElementById("upscale");
 
-  // let checkboxes = document.querySelectorAll('input[type="checkbox"]');
-  // let restaurantsList = document.querySelector(".restaurants-list");
-  // let restaurantsBoxes = document.querySelectorAll(".restaurants-box");
-  // let images = document.querySelectorAll(".restaurants img");
-
-  // let isChecked = false;
-
-  // checkboxes.forEach((checkbox) => {
-  //   if (checkbox.checked) {
-  //     isChecked = true;
-  //   }
-  // });
-
   for (let i = 0; i < restaurants.length; i++) {
     restaurants[i].style.display = "block";
   }
@@ -68,16 +55,6 @@ function filter() {
     let isUs = restaurant.classList.contains("us");
 
     ///////////veg
-
-    // if (isChecked) {
-    //   restaurantsList.classList.add("dummy");
-
-    // restaurantsList.style.flexDirection = "column";
-    // restaurantsBoxes.forEach((box) => {
-    // box.style.width = "30rem";
-    // box.style.float = "right";
-    // });
-    // images.classList.add("img-mar");
 
     //If both veg and nonveg selected
     if (vegres.checked && nonvegres.checked) {
@@ -1682,16 +1659,6 @@ function filter() {
     } else {
       restaurant.classList.remove("dummy");
     }
-    // } else {
-    //   // restaurantsList.classList.remove("dummy");
-
-    //   // restaurantsList.style.flexDirection = "row";
-    //   // restaurantsBoxes.forEach((box) => {
-    //   //   box.style.width = "22rem";
-    //   //   // box.style.float = "";
-    //   // });
-    //   // images.classList.remove("img-mar");
-    // }
   }
 }
 

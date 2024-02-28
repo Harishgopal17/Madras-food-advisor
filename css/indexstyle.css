@@ -293,11 +293,6 @@ aside {
 /* MAIN SECTION */
 /**************************/
 
-.dummy {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr);
-}
-
 .restaurants-list {
   display: flex;
   justify-content: space-around;
