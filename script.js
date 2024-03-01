@@ -20,7 +20,7 @@ function search() {
       li[i].style.display = "none";
     }
   }
-}
+};
 
 function filter() {
   let restaurants = document.getElementsByClassName("restaurants");
@@ -1660,12 +1660,31 @@ function filter() {
       restaurant.classList.remove("dummy");
     }
   }
-}
+};
 
-function myFunction() {
-  var x = document.getElementById("snackbar");
-  x.className = "show";
-  setTimeout(function () {
-    x.className = x.className.replace("show", "");
-  }, 3000);
-}
+// function myFunction() {
+//   var x = document.getElementById("snackbar");
+//   x.className = "show";
+//   setTimeout(function () {
+//     x.className = x.className.replace("show", "");
+//   }, 3000);
+// };
+
+$("#submit-form").submit((e) => {
+  e.preventDefault()
+  $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
+      data: $("#submit-form").serialize(),
+      method: "post",
+      success: function (response) {
+          // alert("Thank you")
+          
+          window.location.reload()
+          //window.location.href="https://google.com"
+      },
+      error: function (err) {
+          alert("Something Error")
+
+      }
+  })
+})

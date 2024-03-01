@@ -17,6 +17,7 @@
     />
     <link rel="stylesheet" href="css/contactusstyle.css" />
     <link rel="icon" type="image/x-icon" href="logo/favicon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Contact Us - Madras Food Advisor</title>
   </head>
   <body>
@@ -201,7 +202,7 @@
             <form id="submit-form" action="">
               <div class="mb-3">
                   <label for="nameinput" class="form-label">Name :</label>
-                  <input type="text" class="form-control" id="nameinput" placeholder="Name" name="Name"
+                  <input type="text" class="form-control" id="nameinput" placeholder="Full Name" name="Name"
                       required>
               </div>
               <div class="mb-3">
@@ -215,11 +216,11 @@
                       name="Email" required>
               </div>
               <div class="mb-3">
-                  <label for="textarea" class="form-label">Subject :</label>
+                  <label for="textarea" class="form-label">Message :</label>
                   <textarea class="form-control" id="textarea" rows="3" placeholder="Write something... "
-                      name="Message"></textarea>
+                      name="Message from Madras food advisor"></textarea>
               </div>  
-                <input type="button" class="button" value="submit" onclick="myFunction()"></input>
+                <input type="submit" class="button" value="submit"></input>
               
             </form>
           </div>
@@ -256,6 +257,5 @@
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"
   ></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="/script.js"></script>
+  <script src="script.js"></script>
 </html>
