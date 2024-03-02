@@ -332,9 +332,12 @@ aside {
   color: #333;
 }
 
+.restaurants{
+  transition: all 0.3s;
+}
+
 .restaurants:hover {
   transform: scale(1.04);
-  transition: all 0.3s;
 }
 
 .restaurants {
@@ -518,4 +521,11 @@ footer {
   font-size: 1.6rem;
   padding: 1rem;
   text-align: center;
+}
+
+
+@media (max-width :1200px){
+  html {
+    font-size: 56.25%;
+  }
 }
