@@ -74,6 +74,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #333;
+  background-color: #f8f9fa;
+  /* background-color: #2a435c; */
 }
 
 .container {
@@ -91,6 +93,7 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 0 4.8rem;
+  background-color: #fff;
 }
 
 .logo-flex {
@@ -211,7 +214,7 @@ body {
   grid-template-rows: 3rem auto;
   row-gap: 3rem;
   column-gap: 4rem;
-  margin-bottom:6.4rem;
+  margin-bottom: 6.4rem;
 }
 
 .main-heading {
@@ -224,9 +227,6 @@ body {
 /**************************/
 
 main {
-  /* width: 100%;
-  height: 100%; */
-  background-color: #f8f9fa;
   border-top: 1px solid #ccc;
   padding-top: 2rem;
 }
@@ -288,6 +288,7 @@ aside {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  padding: 0 !important;
 }
 .google-map h3 {
   font-size: 1.6rem;
@@ -307,6 +308,7 @@ aside {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3rem;
+  margin-left: 3rem;
 }
 /* .restaurants-list a:link,
 .restaurants-list a:visited {
@@ -320,19 +322,21 @@ aside {
   transform: scale(1.04);
 } */
 
-.restaurants a:link, .restaurants a:visited{
+.restaurants a:link,
+.restaurants a:visited {
   display: inline-block;
   text-decoration: none;
   color: #333;
 }
 
-.restaurants a:hover, .restaurants a:active{
+.restaurants a:hover,
+.restaurants a:active {
   display: inline-block;
   text-decoration: none;
   color: #333;
 }
 
-.restaurants{
+.restaurants {
   transition: all 0.3s;
 }
 
@@ -346,8 +350,6 @@ aside {
   color: #333;
   width: 22rem;
 }
-
-
 
 .img {
   border-radius: 12px 12px 0 0;
@@ -403,8 +405,6 @@ aside {
 /* TESTIMONIALS  */
 /**************************/
 
-
-
 .testimonial-box {
   background-color: #997108;
   padding: 2.5rem;
@@ -432,22 +432,20 @@ aside {
   align-self: flex-end;
 }
 
-
 /**************************/
 /* ABOUT US  */
 /**************************/
 
-.aboutus { 
+.aboutus {
   /* margin-bottom: 8rem; */
   padding-bottom: 8rem;
 }
 
-.aboutus-content{
+.aboutus-content {
   display: flex;
   flex-direction: column;
   gap: 2.4rem;
   margin: 0 3rem;
-
 }
 
 .aboutus-text {
@@ -523,9 +521,28 @@ footer {
   text-align: center;
 }
 
-
-@media (max-width :1200px){
+@media (max-width: 1200px) {
   html {
     font-size: 56.25%;
+  }
+  body {
+    /* width: min-content; */
+    width: fit-content;
+  }
+
+  .nav-list {
+    gap: 2.8rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .restaurants-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-left: 5rem;
+  }
+
+  .google-map iframe {
+    width: 190 !important;
   }
 }
