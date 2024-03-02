@@ -14,7 +14,6 @@
     <title>Madras Food Advisor</title>
   </head>
   <body>
-    <div class="container">
       <header class="main-nav">
         <div class="logo-and-search-flex">
           <div class="logo-flex">
@@ -166,9 +165,9 @@
           </ul>
         </nav>
       </header>
-    </div>
     <main>
-      <div class="container main-section">
+      <div class="container">
+        <section class="main-section">
         <header class="main-heading">
           <h3>Restaurants in Chennai (Madras)</h3>
         </header>
@@ -318,10 +317,10 @@
         </aside>
         <section>
           <div class="restaurants-list">
+            <figure
+            class="restaurants veg nonveg rest breakfast lunch dinner us"
+            >
             <a href="Restaurants/the-dining-room.html" target="_blank">
-              <figure
-                class="restaurants veg nonveg rest breakfast lunch dinner us"
-              >
                 <img
                   class="img"
                   src="img/the-dining-room1.jpg"
@@ -355,10 +354,10 @@
                     </li>
                   </ul>
                 </div>
+              </a>
               </figure>
-            </a>
-            <a href="Restaurants/theresidency.html" target="_blank">
               <figure class="restaurants veg nonveg rest lunch dinner us">
+                <a href="Restaurants/theresidency.html" target="_blank">
                 <img
                   class="img"
                   src="img/the-residency1.jpg"
@@ -392,10 +391,10 @@
                     </li>
                   </ul>
                 </div>
+              </a>
               </figure>
-            </a>
-            <a href="Restaurants/drizzle-by-the-beach.html" target="_blank">
               <figure class="restaurants veg nonveg rest lunch dinner us">
+                <a href="Restaurants/drizzle-by-the-beach.html" target="_blank">
                 <img
                   class="img"
                   src="img/drizzle-by-the-beach1.jpg"
@@ -431,13 +430,13 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg dessert us">
             <a
-              href="Restaurants/fabelle-chocolate-boutique.html"
+            href="Restaurants/fabelle-chocolate-boutique.html"
               target="_blank"
             >
-              <figure class="restaurants veg nonveg dessert us">
                 <img
                   class="img"
                   src="img/fabelle-chocolate-boutique1.jpg"
@@ -471,52 +470,56 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
-            <a href="Restaurants/a2b-veg-restaurant.html" target="_blank">
-              <figure class="restaurants veg rest breakfast lunch dinner bf mr">
-                <img
-                  class="img"
-                  src="img/adyar-anandha-bavan1.jpg"
-                  alt="adyar-anandha-bavan"
-                />
-                <div class="restaurants-box">
-                  <h3>A2B Veg Restaurant</h3>
-                  <ul class="restaurants-details">
-                    <li>
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="location-icon"
-                      >
-                        <path
-                          fill-rule="evenodd"
-                          d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-                          clip-rule="evenodd"
+              </a>
+            </figure>
+            <figure class="restaurants veg rest breakfast lunch dinner bf mr">
+              <a
+              href="Restaurants/aab-veg-restaurant.html"
+                target="_blank"
+              >
+                  <img
+                    class="img"
+                    src="img/adyar-anandha-bavan1.jpg"
+                    alt="adyar-anandha-bavan1"
+                  />
+                  <div class="restaurants-box">
+                    <h3>A2B Veg Restaurant</h3>
+                    <ul class="restaurants-details">
+                      <li>
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 0 24 24"
+                          fill="currentColor"
+                          class="location-icon"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="m11.54 22.351.07.04.028.016a.76.76 0 0 0 .723 0l.028-.015.071-.041a16.975 16.975 0 0 0 1.144-.742 19.58 19.58 0 0 0 2.683-2.282c1.944-1.99 3.963-4.98 3.963-8.827a8.25 8.25 0 0 0-16.5 0c0 3.846 2.02 6.837 3.963 8.827a19.58 19.58 0 0 0 2.682 2.282 16.975 16.975 0 0 0 1.145.742ZM12 13.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                            clip-rule="evenodd"
+                          />
+                        </svg>
+                        <span>9 Lattice Bridge Road, Adyar</span>
+                      </li>
+                      <li>
+                        <img
+                          src="icons/foodplate-orange.svg"
+                          class="food-plate-icon"
+                          alt="food plate icon"
                         />
-                      </svg>
-                      <span>9 Lattice Bridge Road, Adyar</span>
-                    </li>
-                    <li>
-                      <img
-                        src="icons/foodplate-orange.svg"
-                        class="food-plate-icon"
-                        alt="food plate icon"
-                      />
-                      <span>Indian, Asian, Vegetarian Friendly</span>
-                    </li>
-                  </ul>
-                </div>
+                        <span>Indian, Asian, Vegetarian Friendly</span>
+                      </li>
+                    </ul>
+                  </div>
+                </a>
               </figure>
-            </a>
+            
+            <figure
+              class="restaurants veg nonveg rest cafe dessert breakfast mr"
+            >
             <a
               href="Restaurants/old-madras-baking-company.html"
               target="_blank"
             >
-              <figure
-                class="restaurants veg nonveg rest cafe dessert breakfast mr"
-              >
                 <img
                   class="img"
                   src="img/old-madras-baking-company1.jpg"
@@ -552,10 +555,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
-            <a href="Restaurants/murugans-idli-shop.html" target="_blank">
-              <figure class="restaurants veg rest breakfast lunch dinner bf mr">
+              </a>
+            </figure>
+            <figure class="restaurants veg rest breakfast lunch dinner bf mr">
+                <a href="Restaurants/murugans-idli-shop.html" target="_blank">
                 <img
                   class="img"
                   src="img/murugans-idli-shop1.jpg"
@@ -589,12 +592,12 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure
+            class="restaurants veg nonveg rest cafe dessert breakfast mr"
+            >
             <a href="Restaurants/blu-boulangerie-co.html" target="_blank">
-              <figure
-                class="restaurants veg nonveg rest cafe dessert breakfast mr"
-              >
                 <img
                   class="img"
                   src="img/blu-boulangerie-co1.jpg"
@@ -628,10 +631,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg rest lunch dinner bf mr">
             <a href="Restaurants/monk'splate.html" target="_blank">
-              <figure class="restaurants veg nonveg rest lunch dinner bf mr">
                 <img class="img" src="img/monks-plate1.jpg" alt="monks-plate" />
                 <div class="restaurants-box">
                   <h3>Monk's Plate</h3>
@@ -661,10 +664,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants nonveg rest lunch dinner mr us">
             <a href="Restaurants/the-marina.html" target="_blank">
-              <figure class="restaurants nonveg rest lunch dinner mr us">
                 <img class="img" src="img/the-marina1.jpg" alt="the-marina" />
                 <div class="restaurants-box">
                   <h3>The Marina</h3>
@@ -694,15 +697,15 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
 
            
             
+            <figure
+            class="restaurants veg nonveg rest cafe breakfast lunch dinner us"
+            >
             <a href="Restaurants/cafe-mercara-express.html" target="_blank">
-              <figure
-                class="restaurants veg nonveg rest cafe breakfast lunch dinner us"
-              >
                 <img
                   class="img"
                   src="img/cafe-mercara-express1.jpg"
@@ -736,10 +739,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg rest breakfast lunch dinner bf mr">
             <a href="Restaurants/sangeetha-veg-restaurant.html" target="_blank">
-              <figure class="restaurants veg rest breakfast lunch dinner bf mr">
                 <img
                   class="img"
                   src="img/sangeetha-veg-restaurant1.jpg"
@@ -773,10 +776,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg cafe dessert mr">
             <a href="Restaurants/krispy-kreme.html" target="_blank">
-              <figure class="restaurants veg nonveg cafe dessert mr">
                 <img
                   class="img"
                   src="img/krispy-kreme1.jpg"
@@ -810,11 +813,11 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
             
+            <figure class="restaurants veg nonveg rest lunch dinner us">
             <a href="Restaurants/tuscana-pizzeria.html" target="_blank">
-              <figure class="restaurants veg nonveg rest lunch dinner us">
                 <img
                   class="img"
                   src="img/tuscana-pizzeria1.jpg"
@@ -848,12 +851,12 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure
+            class="restaurants veg nonveg rest breakfast lunch dinner mr us"
+            >
             <a href="Restaurants/ministry-of-chutneys.html" target="_blank">
-              <figure
-                class="restaurants veg nonveg rest breakfast lunch dinner mr us"
-              >
                 <img
                   class="img"
                   src="img/ministry-of-chutneys3.jpg"
@@ -887,12 +890,12 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure
+            class="restaurants veg nonveg rest cafe breakfast lunch dinner mr us"
+            >
             <a href="Restaurants/cafe-g.html" target="_blank">
-              <figure
-                class="restaurants veg nonveg rest cafe breakfast lunch dinner mr us"
-              >
                 <img class="img" src="img/cafe-g5.jpg" alt="cafe-g" />
                 <div class="restaurants-box">
                   <h3>Cafe G</h3>
@@ -922,10 +925,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg rest lunch dinner bf mr">
             <a href="Restaurants/the-great-kabab-factory.html" target="_blank">
-              <figure class="restaurants veg nonveg rest lunch dinner bf mr">
                 <img
                   class="img"
                   src="img/the-great-kabab-factory1.jpg"
@@ -959,10 +962,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg cafe lunch bf mr">
             <a href="Restaurants/cafe-arabica.html" target="_blank">
-              <figure class="restaurants veg nonveg cafe lunch bf mr">
                 <img
                   class="img"
                   src="img/cafe-arabica1.jpg"
@@ -996,10 +999,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
+            <figure class="restaurants veg nonveg cafe dessert bf mr">
             <a href="Restaurants/waffles-thru-the-day.html" target="_blank">
-              <figure class="restaurants veg nonveg cafe dessert bf mr">
                 <img
                   class="img"
                   src="img/waffles-thru-the-day1.jpg"
@@ -1033,10 +1036,10 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
-            <a href="Restaurants/triplicane-ratna-cafe.html" target="_blank">
-              <figure class="restaurants veg rest breakfast lunch cafe bf">
+              </a>
+            </figure>
+            <figure class="restaurants veg rest breakfast lunch cafe bf">
+                <a href="Restaurants/triplicane-ratna-cafe.html" target="_blank">
                 <img
                   class="img"
                   src="img/triplicane-ratna-cafe1.jpg"
@@ -1070,12 +1073,12 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
             
             
+            <figure class="restaurants veg nonveg rest lunch dinner mr">
             <a href="Restaurants/barbeque-nation.html" target="_blank">
-              <figure class="restaurants veg nonveg rest lunch dinner mr">
                 <img
                   class="img"
                   src="img/barbeque-nation1.jpg"
@@ -1109,44 +1112,51 @@
                     </li>
                   </ul>
                 </div>
-              </figure>
-            </a>
+              </a>
+            </figure>
             
           </div>
         </section>
+      </section>
+        </div>
         <section class="testimonial-section">
-          <div class="testimonial-box">
-            <blockquote class="testimonial-text">
-              "FoodieFusion has become my trusted culinary companion, igniting
-              my passion for cooking with its innovative recipes and expert
-              guidance. Each dish is a testament to flavor and creativity,
-              making every meal an unforgettable experience."
-            </blockquote>
-            <p class="testimonial-author">&mdash; Jamie Oliver</p>
+          <div class="container">            
+            <div class="testimonial-box">
+              <blockquote class="testimonial-text">
+                "FoodieFusion has become my trusted culinary companion, igniting
+                my passion for cooking with its innovative recipes and expert
+                guidance. Each dish is a testament to flavor and creativity,
+                making every meal an unforgettable experience."
+              </blockquote>
+              <p class="testimonial-author">&mdash; Jamie Oliver</p>
+            </div>
           </div>
         </section>
         <section class="aboutus" id="aboutus">
-          <div>
-            <h3>About&nbsp;Us</h3>
-          </div>
-          <div class="aboutus-text">
-            <p>
-              Madras Food Advisor was born out of a love for food and a desire
-              to share the rich culinary heritage of Tamil Nadu with the world.
-              Our team of food enthusiasts is dedicated to curating the best
-              dining experiences and helping you discover the hidden gems of
-              South Indian cuisine.
-            </p>
-            <p>
-              At Madras Food Advisor, our mission is simple: to connect food
-              lovers with the best dining experiences in Tamil Nadu. Whether
-              you're a local looking to explore new restaurants or a visitor
-              eager to sample authentic South Indian cuisine, we're here to be
-              your trusted guide.
-            </p>
-          </div>
+          <div class="container">
+            <div class="aboutus-content">
+              <div>
+                <h3>About&nbsp;Us</h3>
+              </div>
+              <div class="aboutus-text">
+                <p>
+                  Madras Food Advisor was born out of a love for food and a desire
+                  to share the rich culinary heritage of Tamil Nadu with the world.
+                  Our team of food enthusiasts is dedicated to curating the best
+                  dining experiences and helping you discover the hidden gems of
+                  South Indian cuisine.
+                </p>
+                <p>
+                  At Madras Food Advisor, our mission is simple: to connect food
+                  lovers with the best dining experiences in Tamil Nadu. Whether
+                  you're a local looking to explore new restaurants or a visitor
+                  eager to sample authentic South Indian cuisine, we're here to be
+                  your trusted guide.
+                </p>
+              </div>
+            </div>
+        </div>
         </section>
-      </div>
     </main>
     <footer>
       <div class="footer-nav">
