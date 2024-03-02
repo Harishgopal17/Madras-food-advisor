@@ -320,7 +320,7 @@ aside {
   transform: scale(1.04);
 } */
 
-.restaurants a:link, .restaurants a:link{
+.restaurants a:link, .restaurants a:visited{
   display: inline-block;
   text-decoration: none;
   color: #333;
