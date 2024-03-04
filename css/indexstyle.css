@@ -60,6 +60,7 @@ Medium: 11px
 
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -75,6 +76,7 @@ body {
   font-weight: 400;
   color: #333;
   background-color: #f8f9fa;
+  overflow-x: hidden;
 }
 
 .container {
@@ -93,6 +95,8 @@ body {
   align-items: center;
   padding: 0 4.8rem;
   background-color: #fff;
+
+  position: relative;
 }
 
 .logo-flex {
@@ -188,15 +192,13 @@ body {
   color: #333;
   font-weight: 450;
   padding: 0.8rem 1.6rem;
-  background-color: #fff;
+  border-radius: 0.8rem;
+  /* background-color: #fff; */
+  transition: 0.3s;
 }
 
-.nav-list-links:hover,
-.nav-list-links:active {
+.nav-list-links:hover {
   background-color: #f1f3f5;
-  padding: 0.8rem 1.6rem;
-  border-radius: 0.8rem;
-  transition: 0.2s;
 }
 
 .nav-list-links:active {
@@ -312,6 +314,23 @@ aside {
 }
 .google-map h3 {
   font-size: 1.6rem;
+}
+
+.mobile-filter{
+  display: none;
+}
+.mobile-filter-flex{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.mobile-filter-flex h4{
+  font-size: 2.4rem;
+}
+.filter-icon{
+  height: 2.8rem;
+  width: 2.8rem;
+  color: #333;
 }
 
 /**************************/
@@ -579,6 +598,7 @@ footer {
 
   .btn-mobile-nav {
     display: block;
+    z-index: 0;
   }
 
   .nav {
@@ -588,6 +608,7 @@ footer {
     left: 0;
     width: 100%;
     height: 100vh;
+    transform: translateX(100%);
 
     display: flex;
     align-items: center;
@@ -603,6 +624,8 @@ footer {
     opacity: 1;
     pointer-events: auto;
     visibility: visible;
+
+    transform: translateX(0%);
   }
 
   .nav-open .close-icon {
@@ -610,15 +633,40 @@ footer {
   }
 
   .nav-open .menu-icon {
-    display: block;
+    display: none;
   }
   .nav-list {
     flex-direction: column;
     gap: 4.8rem;
   }
 
-  .nav-list-links:link,
+  .nav-open .nav-list-links:link,
   .nav-list-links:visited {
-    font-size: 2rem;
+    font-size: 2.2rem;
   }
 }
+
+/* Mobile filter */
+
+/* @media (max-width: 750px) {
+
+
+  .main-section {
+    display: grid;
+    grid-template-rows: 1fr 1fr auto;
+    column-gap: 4rem;
+  }
+
+  .mobile-filter{
+    display: block;
+  }
+
+  aside{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+  }
+} */
+
