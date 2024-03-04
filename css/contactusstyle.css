@@ -1,5 +1,6 @@
 html {
   font-size: 62.5%;
+  overflow-x: hidden;
 }
 
 * {
@@ -14,6 +15,8 @@ body {
   line-height: 1;
   font-weight: 400;
   color: #333;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 .container {
@@ -142,6 +145,28 @@ body {
 }
 
 /**************************/
+/* Mobile Nav  */
+/**************************/
+
+.btn-mobile-nav {
+  border: none;
+  background: none;
+  cursor: pointer;
+
+  display: none;
+}
+
+.icon-mobile-nav {
+  height: 4rem;
+  width: 4 rem;
+  color: #333;
+}
+
+.nav-close-icon {
+  display: none;
+}
+
+/**************************/
 /* Main  */
 /**************************/
 
@@ -218,7 +243,7 @@ footer {
 .footer-nav ul {
   list-style: none;
   padding: 3rem;
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,76 +279,76 @@ footer {
 
 .dev {
   font-size: 1.6rem;
-  padding: 1rem;
+  padding: 1rem 0 2.4rem 0;
   text-align: center;
 }
 
-/* **************** */
-/* Snackbar */
-/* **************** */
+@media (max-width: 1200px) {
+  html {
+    font-size: 56.25%;
+  }
+  body {
+    width: fit-content;
+  }
 
-#snackbar {
-  visibility: hidden;
-  min-width: 250px;
-  margin-left: -125px;
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  border-radius: 5px;
-  padding: 1rem;
-  position: fixed;
-  z-index: 1;
-  left: 50%;
-  bottom: 30px;
-  font-size: 17px;
+  .nav-list {
+    gap: 2.8rem;
+  }
 }
 
-#snackbar.show {
-  visibility: visible;
-  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
-  animation: fadein 0.5s, fadeout 0.5s 2.5s;
-}
+@media (max-width: 1000px) {
+  body {
+    width: fit-content;
+  }
 
-@-webkit-keyframes fadein {
-  from {
-    bottom: 0;
+  /* Mobile navigation */
+
+  .btn-mobile-nav {
+    display: block;
+    z-index: 0;
+  }
+
+  .nav {
+    background-color: rgb(255, 255, 255, 0.97);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    transform: translateX(100%);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+
     opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
   }
-  to {
-    bottom: 30px;
-    opacity: 1;
-  }
-}
 
-@keyframes fadein {
-  from {
-    bottom: 0;
-    opacity: 0;
-  }
-  to {
-    bottom: 30px;
+  .nav-open .nav {
     opacity: 1;
-  }
-}
+    pointer-events: auto;
+    visibility: visible;
 
-@-webkit-keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
+    transform: translateX(0%);
   }
-  to {
-    bottom: 0;
-    opacity: 0;
-  }
-}
 
-@keyframes fadeout {
-  from {
-    bottom: 30px;
-    opacity: 1;
+  .nav-open .nav-close-icon {
+    display: block;
   }
-  to {
-    bottom: 0;
-    opacity: 0;
+
+  .nav-open .nav-menu-icon {
+    display: none;
+  }
+  .nav-list {
+    flex-direction: column;
+    gap: 4.8rem;
+  }
+
+  .nav-open .nav-list-links:link,
+  .nav-list-links:visited {
+    font-size: 2.2rem;
   }
 }
