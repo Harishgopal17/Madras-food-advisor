@@ -1670,6 +1670,33 @@ function filter() {
 //   }, 3000);
 // };
 
+
+
+
+
+/////////////////////////
+// Mobile
+/////////////////////////
+
+
+const  headernav = document.querySelector(".main-nav");
+const mblmenubtn = document.querySelector('.btn-mobile-nav');
+
+mblmenubtn.addEventListener("click", function() {
+  headernav.classList.toggle ("nav-open");
+});
+
+const mobilefilter = document.querySelector(".mobile-filter-heading");
+const mobilefilteroptions = document.querySelector(".filter-whole")
+
+mobilefilter.addEventListener('click', function(){
+  mobilefilteroptions.classList.toggle("hidden");
+})
+
+
+/////////////////////
+////Contack form
+
 $("#submit-form").submit((e) => {
   e.preventDefault()
   $.ajax({
