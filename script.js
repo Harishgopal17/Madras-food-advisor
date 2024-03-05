@@ -1696,22 +1696,22 @@ const alllinks = document.querySelectorAll("a:link");
 alllinks
   .forEach(function (link) {
     link.addEventListener("click", function (e) {
-      e.preventDefault();
+      // e.preventDefault();
       const href = link.getAttribute("href");
 
       ////////////scroll back to top
-      if (href === "#") {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
+      // if (href === "#") {
+      //   window.scrollTo({
+      //     top: 0,
+      //     behavior: "smooth",
+      //   });
+      // }
 
       ////Scroll to others
-      if (href !== "#" && href.startsWith("#")) {
-        const sectionEl = document.querySelector("href");
-        sectionEl.scrollIntoView({ behavior: "smooth" });
-      }
+      // if (href !== "#" && href.startsWith("#")) {
+      //   const sectionEl = document.querySelector(href);
+      //   sectionEl.scrollIntoView({ behavior: "smooth" });
+      // }
 
       /////Close Mobile nav
 
@@ -1723,7 +1723,7 @@ alllinks
   /////////////////////
   ////Contack form
 
-  .$("#submit-form")
+  $("#submit-form")
   .submit((e) => {
     e.preventDefault();
     $.ajax({
