@@ -124,22 +124,3 @@ etc.....
 # Restaruants
 
 ## Non veg
-
-<section class="testimonial-section">
-          <div class="testimonial-box">
-            <blockquote class="testimonial-text">
-            "FoodieFusion has become my trusted culinary companion, igniting my passion for cooking with its innovative recipes and expert guidance. Each dish is a testament to flavor and creativity, making every meal an unforgettable experience."              
-            </blockquote>
-            <p class="testimonial-author">&mdash; Jamie Oliver</p>
-          </div>
-      </section>
-
-      .testimonial-section {
-
-background-color: #087f5b;
-color: #fff;
-padding: 24px;
-border-radius: 12px;
-grid-row: 3/-1;
-
-}

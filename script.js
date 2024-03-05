@@ -20,7 +20,7 @@ function search() {
       li[i].style.display = "none";
     }
   }
-};
+}
 
 function filter() {
   let restaurants = document.getElementsByClassName("restaurants");
@@ -1660,7 +1660,7 @@ function filter() {
       restaurant.classList.remove("dummy");
     }
   }
-};
+}
 
 // function myFunction() {
 //   var x = document.getElementById("snackbar");
@@ -1670,48 +1670,74 @@ function filter() {
 //   }, 3000);
 // };
 
-
-
-
-
 /////////////////////////
 // Mobile
 /////////////////////////
 
+const headernav = document.querySelector(".main-nav");
+const mblmenubtn = document.querySelector(".btn-mobile-nav");
 
-const  headernav = document.querySelector(".main-nav");
-const mblmenubtn = document.querySelector('.btn-mobile-nav');
-
-mblmenubtn.addEventListener("click", function() {
-  headernav.classList.toggle ("nav-open");
+mblmenubtn.addEventListener("click", function () {
+  headernav.classList.toggle("nav-open");
 });
 
 const mobilefilter = document.querySelector(".mobile-filter-heading");
-const mobilefilteroptions = document.querySelector(".filter-whole")
+const mobilefilteroptions = document.querySelector(".filter-whole");
 
-mobilefilter.addEventListener('click', function(){
+mobilefilter.addEventListener("click", function () {
   mobilefilteroptions.classList.toggle("hidden");
-})
-
+});
 
 /////////////////////
-////Contack form
+////Smooth scrolling animation
 
-$("#submit-form").submit((e) => {
-  e.preventDefault()
-  $.ajax({
+const alllinks = document.querySelectorAll("a:link");
+
+alllinks
+  .forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      e.preventDefault();
+      const href = link.getAttribute("href");
+
+      ////////////scroll back to top
+      if (href === "#") {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      ////Scroll to others
+      if (href !== "#" && href.startsWith("#")) {
+        const sectionEl = document.querySelector("href");
+        sectionEl.scrollIntoView({ behavior: "smooth" });
+      }
+
+      /////Close Mobile nav
+
+      if (link.classList.contains("nav-list-links")) {
+        headernav.classList.toggle("nav-open");
+      }
+    });
+  })
+  /////////////////////
+  ////Contack form
+
+  .$("#submit-form")
+  .submit((e) => {
+    e.preventDefault();
+    $.ajax({
       url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
       data: $("#submit-form").serialize(),
       method: "post",
       success: function (response) {
-          // alert("Thank you")
-          
-          window.location.reload()
-          //window.location.href="https://google.com"
+        // alert("Thank you")
+
+        window.location.reload();
+        //window.location.href="https://google.com"
       },
       error: function (err) {
-          alert("Something Error")
-
-      }
-  })
-})
+        alert("Something Error");
+      },
+    });
+  });
