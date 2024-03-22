@@ -37,12 +37,12 @@ const rest2 = {
 const restaurantsarr = [rest1, rest2];
 
 const res_name = document.querySelector(".rest-name");
-const res_card = document.querySelector(".restaurants");
+const res_card = document.querySelectorAll(".restaurants");
 
 const contentcontainer = document.querySelector(".content");
 
 function displaycontent(rest) {
-  //   contentcontainer.innerHTML = " ";
+  // contentcontainer.innerHTML = " ";
   const html = `<header class="container header-flex">
   <h2 class="res-name">${rest.name}</h2>
   <ul class="res-details">
@@ -213,13 +213,18 @@ function displaycontent(rest) {
   console.log(html);
 }
 
-let currentrest;
-res_card.addEventListener("click", function () {
-  alert("clicked");
-  currentrest = restaurantsarr.find((res) => res.name === res_name.textContent);
+let currentrest = rest1;
 
-  console.log(currentrest);
-  //   displaycontent(currentrest);
+res_card.forEach((card) => {
+  card.addEventListener("click", function () {
+    // alert("clicked");
+    res_name.textContent = card.querySelector(".rest-name").textContent;
+    currentrest = restaurantsarr.find(
+      (res) => res.name === res_name.textContent
+    );
+    console.log(currentrest);
+  });
 });
 
-// displaycontent(rest2);
+displaycontent(currentrest);
+// displaycontent(rest1);
