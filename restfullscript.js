@@ -36,13 +36,13 @@ const rest2 = {
 
 const restaurantsarr = [rest1, rest2];
 
-const res_name = document.querySelector(".rest-name");
-const res_card = document.querySelectorAll(".restaurants");
-
+const title = document.getElementsByTagName("TITLE")[0];
 const contentcontainer = document.querySelector(".content");
 
 function displaycontent(rest) {
-  // contentcontainer.innerHTML = " ";
+  contentcontainer.innerHTML = " ";
+  title.innerHTML = " ";
+  title.textContent = `${rest.name} | Madras Food Advisor`;
   const html = `<header class="container header-flex">
   <h2 class="res-name">${rest.name}</h2>
   <ul class="res-details">
@@ -210,21 +210,32 @@ function displaycontent(rest) {
 </main>`;
 
   contentcontainer.insertAdjacentHTML("afterbegin", html);
-  console.log(html);
 }
 
-let currentrest = rest1;
+const urlParams = new URLSearchParams(window.location.search);
+const restaurantName = urlParams.get("name");
 
-res_card.forEach((card) => {
-  card.addEventListener("click", function () {
-    // alert("clicked");
-    res_name.textContent = card.querySelector(".rest-name").textContent;
-    currentrest = restaurantsarr.find(
-      (res) => res.name === res_name.textContent
-    );
-    console.log(currentrest);
-  });
-});
-
+const currentrest = restaurantsarr.find((res) => res.name === restaurantName);
 displaycontent(currentrest);
+
+const searchrestaurantName = urlParams.get("name");
+
+const searchcurrentrest = restaurantsarr.find(
+  (res) => res.name === searchrestaurantName
+);
+displaycontent(searchcurrentrest);
+// let currentrest;
+
+// res_card.forEach((card) => {
+//   card.addEventListener("click", function () {
+//     // alert("clicked");
+//     res_name.textContent = card.querySelector(".rest-name").textContent;
+//     currentrest = restaurantsarr.find(
+//       (res) => res.name === res_name.textContent
+//     );
+//     console.log(currentrest);
+//   });
+// });
+
+// displaycontent(currentrest);
 // displaycontent(rest1);
