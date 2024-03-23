@@ -3,7 +3,6 @@ html {
   overflow-x: hidden;
 
   scroll-behavior: smooth;
-
 }
 
 * {
@@ -294,13 +293,13 @@ main {
 .detail-box {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.2rem;
 }
 
 .details {
   display: flex;
   flex-direction: column;
-  gap: 1.7rem;
+  gap: 2.2rem;
 }
 
 .location-map a:link {
