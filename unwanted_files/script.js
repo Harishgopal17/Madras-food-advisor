@@ -1661,27 +1661,7 @@ function filter() {
     }
   }
 }
-///////////////////////////////////////
-const res_card = document.querySelectorAll(".restaurants");
 
-res_card.forEach((card) => {
-  card.addEventListener("click", function () {
-    const restaurantName = card.querySelector(".rest-name").textContent;
-    const url = `resfull.html?name=${encodeURIComponent(restaurantName)}`;
-    window.open(url, "_blank");
-  });
-});
-
-const res_search = document.querySelectorAll(".search-list > li");
-
-res_search.forEach((search) => {
-  search.addEventListener("click", function () {
-    const searchrestaurantName = search.querySelector("a").textContent;
-    const url = `resfull.html?name=${encodeURIComponent(searchrestaurantName)}`;
-    window.open(url, "_blank");
-  });
-});
-///////////////////////////////////////
 // function myFunction() {
 //   var x = document.getElementById("snackbar");
 //   x.className = "show";
@@ -1713,49 +1693,51 @@ mobilefilter.addEventListener("click", function () {
 
 const alllinks = document.querySelectorAll("a:link");
 
-alllinks.forEach(function (link) {
-  link.addEventListener("click", function (e) {
-    // e.preventDefault();
-    const href = link.getAttribute("href");
+alllinks
+  .forEach(function (link) {
+    link.addEventListener("click", function (e) {
+      // e.preventDefault();
+      const href = link.getAttribute("href");
 
-    ////////////scroll back to top
-    // if (href === "#") {
-    //   window.scrollTo({
-    //     top: 0,
-    //     behavior: "smooth",
-    //   });
-    // }
+      ////////////scroll back to top
+      // if (href === "#") {
+      //   window.scrollTo({
+      //     top: 0,
+      //     behavior: "smooth",
+      //   });
+      // }
 
-    ////Scroll to others
-    // if (href !== "#" && href.startsWith("#")) {
-    //   const sectionEl = document.querySelector(href);
-    //   sectionEl.scrollIntoView({ behavior: "smooth" });
-    // }
+      ////Scroll to others
+      // if (href !== "#" && href.startsWith("#")) {
+      //   const sectionEl = document.querySelector(href);
+      //   sectionEl.scrollIntoView({ behavior: "smooth" });
+      // }
 
-    /////Close Mobile nav
+      /////Close Mobile nav
 
-    if (link.classList.contains("nav-list-links")) {
-      headernav.classList.toggle("nav-open");
-    }
+      if (link.classList.contains("nav-list-links")) {
+        headernav.classList.toggle("nav-open");
+      }
+    });
+  })
+  /////////////////////
+  ////Contack form
+
+  $("#submit-form")
+  .submit((e) => {
+    e.preventDefault();
+    $.ajax({
+      url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
+      data: $("#submit-form").serialize(),
+      method: "post",
+      success: function (response) {
+        // alert("Thank you")
+
+        window.location.reload();
+        //window.location.href="https://google.com"
+      },
+      error: function (err) {
+        alert("Something Error");
+      },
+    });
   });
-});
-/////////////////////
-////Contack form
-
-$("#submit-form").submit((e) => {
-  e.preventDefault();
-  $.ajax({
-    url: "https://script.google.com/macros/s/AKfycbyvCeqGX_IkJ0J1Kwwk8O-8Au59aZWxYXFtd4l-o-IFHuH_7VTt00gdiS2l8mb4cbDR/exec",
-    data: $("#submit-form").serialize(),
-    method: "post",
-    success: function (response) {
-      // alert("Thank you")
-
-      window.location.reload();
-      //window.location.href="https://google.com"
-    },
-    error: function (err) {
-      alert("Something Error");
-    },
-  });
-});
