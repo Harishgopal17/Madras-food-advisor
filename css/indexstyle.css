@@ -657,7 +657,7 @@ footer {
   .main-nav {
     /* justify-content: space-around; */
     gap: 2rem;
-    font-size: 56.25%;
+    font-size: 1.6rem;
   }
 
   .logo-flex {
@@ -674,6 +674,7 @@ footer {
 
   .main-heading {
     grid-column: 1/-1;
+    font-size: 3rem;
   }
 
   .mobile-filter-heading {
@@ -697,25 +698,25 @@ footer {
 
   .restaurants-list {
     grid-template-columns: 1fr;
-    gap: 3rem;
+    gap: 5rem;
   }
 
   .restaurants {
-    width: 50rem;
+    width: 38rem;
     justify-self: center;
   }
 
   .img {
     border-radius: 12px 12px 0 0;
-    width: 50rem;
-    height: 25rem;
+    width: 38rem;
+    height: 20rem;
   }
   .restaurants-box {
     gap: 1.8rem;
     justify-content: space-around;
     padding: 1.4rem;
-    width: 50rem;
-    height: 25rem;
+    width: 38rem;
+    height: 20rem;
   }
 
   .restaurants-box h3 {
@@ -723,7 +724,7 @@ footer {
   }
 
   .restaurants-details li {
-    font-size: 2.4rem;
+    font-size: 2.2rem;
     gap: 1.2rem;
   }
   .restaurants-details {
@@ -740,7 +741,52 @@ footer {
     height: 3.6rem;
   }
 
-  /* .restaurants-list {
-    align-items: center;
-  } */
+  .mobile-filter-flex h4 {
+    font-size: 2.8rem;
+  }
+  .checkbox-flex {
+    gap: 0.6rem;
+    font-size: 2rem;
+    font-weight: 400;
+  }
+
+  .checkbox-flex input[type="checkbox"] {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+
+  .checkbox-container {
+    gap: 1.6rem;
+  }
+
+  .filter-heading {
+    font-size: 2rem;
+  }
+  .testimonial-text {
+    font-size: 2rem;
+  }
+
+  .testimonial-author {
+    font-size: 1.8rem;
+  }
+
+  .aboutus h3 {
+    font-size: 2.2rem;
+  }
+
+  .aboutus p {
+    font-size: 1.8rem;
+  }
+  .footer-nav ul {
+    font-size: 1.8rem;
+  }
+  .disclaimer-heading {
+    font-size: 2rem;
+    font-weight: 500;
+  }
+
+  .disclaimer-text {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
 }
