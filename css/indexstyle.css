@@ -651,9 +651,13 @@ footer {
 /* Mobile filter */
 
 @media (max-width: 750px) {
+  html {
+    font-size: 62.5%;
+  }
   .main-nav {
     /* justify-content: space-around; */
     gap: 2rem;
+    font-size: 56.25%;
   }
 
   .logo-flex {
@@ -692,6 +696,29 @@ footer {
   }
 
   .restaurants-list {
-    align-items: center;
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
+
+  .restaurants {
+    width: 30rem;
+    justify-self: center;
+  }
+
+  .img {
+    border-radius: 12px 12px 0 0;
+    width: 30rem;
+    height: 15rem;
+  }
+  .restaurants-box {
+    gap: 1.8rem;
+    justify-content: space-around;
+    padding: 1.4rem;
+    width: 30rem;
+    height: 15rem;
+  }
+
+  /* .restaurants-list {
+    align-items: center;
+  } */
 }
