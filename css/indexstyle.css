@@ -701,21 +701,43 @@ footer {
   }
 
   .restaurants {
-    width: 30rem;
+    width: 50rem;
     justify-self: center;
   }
 
   .img {
     border-radius: 12px 12px 0 0;
-    width: 30rem;
-    height: 15rem;
+    width: 50rem;
+    height: 25rem;
   }
   .restaurants-box {
     gap: 1.8rem;
     justify-content: space-around;
     padding: 1.4rem;
-    width: 30rem;
-    height: 15rem;
+    width: 50rem;
+    height: 25rem;
+  }
+
+  .restaurants-box h3 {
+    font-size: 3rem;
+  }
+
+  .restaurants-details li {
+    font-size: 2.4rem;
+    gap: 1.2rem;
+  }
+  .restaurants-details {
+    gap: 1rem;
+  }
+  .location-icon {
+    width: 36px;
+    height: 36px;
+    fill: #ffbc0d;
+  }
+
+  .food-plate-icon {
+    width: 3.6rem;
+    height: 3.6rem;
   }
 
   /* .restaurants-list {
