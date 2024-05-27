@@ -79,6 +79,7 @@ body {
   color: #333;
   background-color: #f8f9fa;
   overflow-x: hidden;
+  width: 100vw;
 }
 
 .container {
